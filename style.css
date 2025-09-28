@@ -1,0 +1,218 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: rgba(0,0,0,0.4);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  width: 350px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+h1, h2 {
+  margin-bottom: 15px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 5px;
+  background: #ff7675;
+  color: white;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #d63031;
+}
+
+.start-btn {
+  background: #00b894;
+}
+
+.start-btn:hover {
+  background: #019875;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 8px 0;
+  padding: 8px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* === Tambahkan kode ini di akhir file style.css === */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modal-overlay:not(.hidden) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 85%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transform: scale(0.8);
+  transition: transform 0.3s ease-in-out;
+}
+
+.modal-overlay:not(.hidden) .modal-content {
+  transform: scale(1);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.modal-content p {
+  color: #eee;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+#modalCloseBtn {
+  background: #ff7675;
+  margin-top: 15px;
+  padding: 12px 25px;
+  font-size: 1em;
+}
+
+#modalCloseBtn:hover {
+  background: #d63031;
+}
+
+.settings-container {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 15px 20px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.settings-container label {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.settings-container input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #2d3436;
+  border-radius: 5px;
+  outline: none;
+  margin-top: 10px;
+}
+
+.settings-container input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  background: #ff7675;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.settings-container input[type="range"]::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  background: #ff7675;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.max-info {
+  font-size: 0.8em;
+  color: #dfe6e9;
+  text-align: center;
+  margin: 5px 0 0 0;
+}
+
+.game-modes {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.spy-btn {
+  background: #6c5ce7; /* Warna ungu untuk Spyfall */
+}
+
+.spy-btn:hover {
+  background: #4834d4;
+}
+
+#spyGuessInput {
+  width: 80%;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 8px;
+  border: 2px solid #fff;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 1em;
+  text-align: center;
+}
+
+#spyGuessInput::placeholder {
+  color: #ccc;
+}
+
+/* Style BARU untuk modal saat kondisi salah/kalah */
+.modal-content.is-error {
+  background: linear-gradient(135deg, #d63031, #c0392b); /* Gradasi Merah */
+}

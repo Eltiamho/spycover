@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminasi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="spycover192.png">
+  <script src="script.js" defer></script>
+  
+</head>
+<body onload="renderEliminationList()">
+  <div class="container">
+    <h1>⚔️ Eliminasi Pemain</h1>
+    <ul id="eliminationList"></ul>
+    <button class="start-btn" onclick="finishGame()">Selesai Permainan</button>
+  </div>
+  <div id="customModal" class="modal-overlay hidden">
+  <div class="modal-content">
+    <h2 id="modalTitle"></h2>
+    <p id="modalMessage"></p>
+    <button id="modalCloseBtn">Tutup</button>
+  </div>
+</div>
+<div id="spyGuessModal" class="modal-overlay hidden">
+  <div class="modal-content">
+    <h2>Kesempatan Terakhir!</h2>
+    <p>Anda telah tereliminasi. Tebak lokasi untuk mencoba memenangkan permainan:</p>
+    <input type="text" id="spyGuessInput" placeholder="Ketik lokasi di sini..." autocomplete="off">
+    <button id="spyGuessSubmitBtn">Tebak</button>
+  </div>
+</div>
+</body>
+</html>

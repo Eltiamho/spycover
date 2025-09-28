@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setup Pemain</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="spycover192.png">
+</head>
+<body onload="renderPlayers()">
+  <div class="container">
+    <h1>🎭 Undercover</h1>
+    <p>Masukkan nama pemain</p>
+    <input id="playerName" placeholder="Nama pemain">
+    <button onclick="addPlayer()">Tambah</button>
+    <ul id="playerList"></ul>
+        <div id="settingsContainer" class="settings-container hidden">
+      <label for="undercoverSlider">Jumlah Undercover: <strong id="undercoverCountDisplay">1</strong></label>
+      <input type="range" id="undercoverSlider" min="1" max="1" value="1">
+      <p class="max-info">Maksimal yang disarankan: <span id="maxUndercover">1</span></p>
+    </div>
+    <div class="game-modes">
+  <button class="start-btn" onclick="startGame('undercover')">Mulai Undercover</button>
+  <button class="start-btn spy-btn" onclick="startGame('spyfall')">Mulai Spyfall</button>
+</div>
+  </div>
+    
+  </div>
+  <div id="customModal" class="modal-overlay hidden">
+  <div class="modal-content">
+    <h2 id="modalTitle"></h2>
+    <p id="modalMessage"></p>
+    <button id="modalCloseBtn">Tutup</button>
+  </div>
+</div>
+  <script src="script.js" defer></script>
+</body>
+</html>

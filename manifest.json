@@ -1,0 +1,21 @@
+{
+  "name": "Spyfall & Undercover Game",
+  "short_name": "SpyCover",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#4e54c8",
+  "theme_color": "#4e54c8",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/spycover192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/spycover512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

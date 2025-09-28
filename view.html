@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undercover Lihat kata</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h2 id="turnTitle">Giliran Pemain</h2>
+
+    <div id="wordBox" class="hidden" style="margin:1rem 0; font-size:1.2rem; font-weight:bold;"></div>
+
+    <div style="display:flex; gap:0.5rem; justify-content:center; margin-top:1rem;">
+      <button onclick="showWord()">Lihat Kata</button>
+      <button onclick="nextPlayer()">Lanjut</button>
+    </div>
+
+    <h2 style="margin-top:1.5rem;">Eliminasi</h2>
+    <ul id="eliminationList"></ul>
+
+    <button onclick="resetGame()" style="margin-top:1rem; background:#d63031;">Akhiri Game</button>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal">
+    <div id="modalContent">
+      <h2 id="modalTitle"></h2>
+      <p id="modalBody"></p>
+      <button onclick="closeModal()">OK</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    initGame();
+  </script>
+</body>
+</html>

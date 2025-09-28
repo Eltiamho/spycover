@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reveal Kata - Undercover</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="spycover192.png">
+  <script src="script.js" defer></script>
+</head>
+<body onload="showCurrentPlayer()">
+  <div class="container">
+    <h2 id="currentPlayer"></h2>
+    <p id="wordDisplay" class="hidden"></p>
+    <div class="buttons">
+      <button onclick="showWord()">👀 Lihat Kata</button>
+      <button onclick="nextPlayer()">➡️ Lanjut</button>
+    </div>
+    <div id="customModal" class="modal-overlay hidden">
+  <div class="modal-content">
+    <h2 id="modalTitle"></h2>
+    <p id="modalMessage"></p>
+    <button id="modalCloseBtn">Tutup</button>
+  </div>
+</div>
+  </div>
+</body>
+</html>
