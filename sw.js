@@ -1,17 +1,18 @@
 // Nama cache (gudang penyimpanan)
-const CACHE_NAME = 'spycover-game-v1';
+const CACHE_NAME = 'undercover-spyfall-game-v1';
 
-// Daftar semua file yang perlu disimpan untuk berjalan offline
+// Daftar semua file dengan PATH YANG SUDAH DIPERBAIKI
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/reveal.html',
-  '/elimination.html',
-  '/finish.html',
-  '/style.css',
-  '/script.js',
-  '/icon-192x192.png',
-  '/icon-512x512.png'
+  './',
+  './index.html',
+  './reveal.html',
+  './elimination.html',
+  './finish.html',
+  './style.css',
+  './script.js',
+  './icon-192x192.png',
+  './icon-512x512.png',
+  './manifest.json'
 ];
 
 // Event 'install': Dijalankan saat service worker diinstal
@@ -19,8 +20,11 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
-        console.log('Cache dibuka');
+        console.log('Cache dibuka, mencoba menyimpan file...');
         return cache.addAll(urlsToCache); // Menyimpan semua file ke cache
+      })
+      .catch(err => {
+        console.error('Gagal menyimpan cache:', err); // Menambah log error
       })
   );
 });
